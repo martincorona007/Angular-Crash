@@ -15,7 +15,8 @@ The way to install and use the @angular/flex-layout library
 	This library will help us create a responsive application
 		npm install @angular/flex-layout --save
 	
-How to work with the Tab Material component
+How to create routes
+ ng g module routing --module app
 
 ng g component home [--skipTests] remove test file
 

@@ -1,3 +1,17 @@
 <app-layout>
-  <app-home></app-home>
+  <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+      <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
+      <!--place to add side-nav code-->
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <!--cont to reside, and add navigation header as well-->
+      
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
 </app-layout>
