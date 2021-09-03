@@ -1,0 +1,15 @@
+.child-1{
+	background-color: orage; 
+}
+.child-2{
+	background-color: yellow; 
+	
+}
+.child-3{
+	background-color: green;
+}
+.container{
+	margin: 15px;
+	height: 200px;
+	border: 2px solid red
+}
