@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "proyectox-58684": {
+      "hosting": {
+        "angular-example": [
+          "proyectox-58684"
+        ]
+      }
+    }
+  }
+}
