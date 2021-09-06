@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item">
-        <img src="https://bulma.io/images/bulma-logo.png">
+      <img src="assets/img/logo.png">
       </a>
     </div>
   </nav>
