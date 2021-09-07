@@ -6,6 +6,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserSingleComponent } from './user-single/user-single.component';
 
 
+
 @NgModule({
   declarations: [
     UserListComponent,
