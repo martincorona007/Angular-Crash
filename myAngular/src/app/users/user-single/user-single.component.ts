@@ -5,20 +5,14 @@ import { UserService } from 'src/app/user.service';
 @Component({
   selector: 'app-user-single',
   template: `
-
+  
   <section class="section">
-  <div class="container">
-  <div class="columns is-multiline">
-    <!-- loop over our users and give them each a card -->
-    <div class="column is-4" *ngFor="let user of users | async">
-      <div class="card">
-        <div class="card-content">
-          <a routerLink="/users/{{ user.login }}">{{ user.login }}</a>
-        </div>      
-      </div>      
+    <div class="container">
+      <div class="card" *ngIf="user">
+        <img [src]="user.avatar_url">
+        <h2>{{ user.login }}</h2>
+      </div>
     </div>
-  </div>
-  </div>
   </section>
   `,
   styles: [
