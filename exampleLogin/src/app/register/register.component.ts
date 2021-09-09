@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../users/users.service';
 
 @Component({
   selector: 'app-register',
@@ -9,10 +10,13 @@ export class RegisterComponent implements OnInit {
   email: string = "";
   password: string = "";
   confirmPassword : string = "";
-  constructor() { }
+  passwordError: boolean = true;
+  constructor(public userService: UsersService) { }
   register(){
-    console.log(this.email);
-    console.log(this.password);
+    const user = {email: this.email, password: this.password};
+    this.userService.register(user).subscribe(data => {
+      console.log(data);
+    })
   }
   ngOnInit(): void {
   }
