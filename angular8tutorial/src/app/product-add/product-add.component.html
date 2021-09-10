@@ -41,7 +41,8 @@
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary"
-                [disabled]="angForm.pristine || angForm.invalid">
+                [disabled]="angForm.pristine || angForm.invalid"
+                (click)="addProduct(ProductName.value,ProductDescription.value,ProductPrice.value)">
                     Create Product
                 </button>
             </div>
