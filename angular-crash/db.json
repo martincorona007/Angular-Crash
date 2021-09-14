@@ -16,14 +16,19 @@
       "id": 3,
       "text": "Foo shopping",
       "day": "May 6th at 1:30pm",
-      "reminder": true
-    }
-    ,
+      "reminder": false
+    },
     {
       "id": 4,
       "text": "test",
       "day": "May 6th at 1:30pm",
       "reminder": true
+    },
+    {
+      "text": "oli",
+      "day": "i dont kown",
+      "reminder": false,
+      "id": 5
     }
   ]
 }
