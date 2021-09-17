@@ -1,1 +1,27 @@
-<p>sing-up works!</p>
+<div class="example-container">
+    <div class="form-conteiner">
+      <form (ngSubmit)="onSubmit()">
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput type="text" name="userName" [(ngModel)]="userName" id="userName" placeholder="Write here">
+          
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput name="email" [(ngModel)]="email" id="email"placeholder="Write here">
+        </mat-form-field>
+
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput name="password" [(ngModel)]="password" id="password" placeholder="Write here">
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput placeholder="Write here">
+          </mat-form-field>
+        <div>
+          <button mat-raised-button color="primary">Sing up</button>
+        </div>
+      </form>
+    </div>
+  </div>

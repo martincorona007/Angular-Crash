@@ -1,0 +1,14 @@
+
+.example-container{
+    text-align: center;
+}
+.form-conteiner{
+    
+    /*width: 600px;*/
+    margin: 100px 200px 100px 200px
+ /*   margin: 0 px auto;
+    margin-top: 200px;*/
+}
+.form-field{
+    display: block;
+}
