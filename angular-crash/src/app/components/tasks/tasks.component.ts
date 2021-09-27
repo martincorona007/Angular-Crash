@@ -8,7 +8,7 @@ import { Task } from 'src/app/Task';
 })
 export class TasksComponent implements OnInit {
   tasks: Task[] = [];
-    //interface arry of 
+    //interface arry of
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
@@ -27,5 +27,5 @@ export class TasksComponent implements OnInit {
   addTask(task: Task){
     this.taskService.addTask(task).subscribe((task) => (this.tasks.push(task)));
   }
-  
+
 }

@@ -2,13 +2,13 @@
 	<li class="list-group-item">
 		<h6>Form Status:</h6>
     
-	<span *ngIf="form?.dirty" class="badge badge-pill badge-secondary">dirty</span>
-    <span *ngIf="form?.pending" class="badge badge-pill badge-primary">pending</span>
-    <span *ngIf="form?.valid" class="badge badge-pill badge-success">valid</span>
-    <span *ngIf="form?.invalid" class="badge badge-pill badge-danger">invalid</span>
-    <span *ngIf="form?.touched" class="badge badge-pill badge-warning">touched</span>
-    <span *ngIf="form?.pristine" class="badge badge-pill badge-info">pristine</span>
-    <span *ngIf="form?.disabled" class="badge badge-pill badge-light">disabled</span>
+	<span *ngIf="form!.dirty" class="badge badge-pill badge-secondary">dirty</span>
+    <span *ngIf="form!.pending" class="badge badge-pill badge-primary">pending</span>
+    <span *ngIf="form!.valid" class="badge badge-pill badge-success">valid</span>
+    <span *ngIf="form!.invalid" class="badge badge-pill badge-danger">invalid</span>
+    <span *ngIf="form!.touched" class="badge badge-pill badge-warning">touched</span>
+    <span *ngIf="form!.pristine" class="badge badge-pill badge-info">pristine</span>
+    <span *ngIf="form!.disabled" class="badge badge-pill badge-light">disabled</span>
   </li>
 
   <ng-container *ngFor="let control of form?.controls | keyvalue">
