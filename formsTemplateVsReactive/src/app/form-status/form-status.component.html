@@ -1,0 +1,48 @@
+<ul class="list-group list-group-horizontal">
+	<li class="list-group-item">
+		<h6>Form Status:</h6>
+    
+	<span *ngIf="form?.dirty" class="badge badge-pill badge-secondary">dirty</span>
+    <span *ngIf="form?.pending" class="badge badge-pill badge-primary">pending</span>
+    <span *ngIf="form?.valid" class="badge badge-pill badge-success">valid</span>
+    <span *ngIf="form?.invalid" class="badge badge-pill badge-danger">invalid</span>
+    <span *ngIf="form?.touched" class="badge badge-pill badge-warning">touched</span>
+    <span *ngIf="form?.pristine" class="badge badge-pill badge-info">pristine</span>
+    <span *ngIf="form?.disabled" class="badge badge-pill badge-light">disabled</span>
+  </li>
+
+  <ng-container *ngFor="let control of form?.controls | keyvalue">
+    <li class="list-group-item">
+      <h6>{{ control.key | titlecase }} Status:</h6>
+
+      <span *ngIf="control.value.valid" class="badge badge-pill badge-success">valid</span>
+      <span *ngIf="control.value.dirty" class="badge badge-pill badge-secondary">dirty</span>
+      <span *ngIf="control.value.pending" class="badge badge-pill badge-primary">pending</span>
+      <span *ngIf="control.value.invalid" class="badge badge-pill badge-danger">invalid</span>
+      <span *ngIf="control.value.touched" class="badge badge-pill badge-warning">touched</span>
+      <span *ngIf="control.value.pristine" class="badge badge-pill badge-info">pristine</span>
+      <span *ngIf="control.value.disabled" class="badge badge-pill badge-light">disabled</span>
+    </li>
+  </ng-container>
+</ul>
+
+<h6>Form Value:</h6>
+<figure class="highlight">
+  <pre><code>{{ form?.value | json }}</code></pre>
+</figure>
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item">
+    <h6>Form Errors:</h6>
+    <figure class="highlight">
+      <pre><code>{{ form?.errors | json }}</code></pre>
+    </figure>
+  </li>
+  <ng-container *ngFor="let control of form?.controls | keyvalue">
+    <li class="list-group-item">
+      <h6>{{ control.key | titlecase }} Errors:</h6>
+      <figure class="highlight">
+        <pre><code>{{ control.value.errors | json }}</code></pre>
+      </figure>
+    </li>
+  </ng-container>
+</ul>

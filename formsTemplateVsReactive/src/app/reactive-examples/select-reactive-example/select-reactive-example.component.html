@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <span class="navbar-brand">Select exampleee</span>
+    <ul class="navbar-nav mr-auto">
+      <li
+        class="nav-item"
+        routerLinkActive="active"
+        #loginActive="routerLinkActive"
+      >
+        <a class="nav-link" routerLink="login"
+          >Login<span *ngIf="loginActive.isActive" class="sr-only"
+            >(current)</span
+          ></a
+        >
+      </li>
+      <li
+        class="nav-item"
+        routerLinkActive="active"
+        #logupActive="routerLinkActive"
+      >
+        <a class="nav-link" [routerLink]="['logup']"
+          >Log up<span *ngIf="logupActive.isActive" class="sr-only"
+            >(current)</span
+          ></a
+        >
+      </li>
+    </ul>
+  </nav>
+  
+  <div class="pt-5">
+    <router-outlet></router-outlet>
+  </div>
+  

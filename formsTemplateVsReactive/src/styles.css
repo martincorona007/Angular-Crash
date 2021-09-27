@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.highlight {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f8f9fa;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.highlight pre {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: 0;
+  }
+
+.form-help {
+  display: none;
+  position: absolute;
+  left: 100%;
+  width: fit-content;
+}
+
+.form-control:focus + .form-help {
+  display: inline;
+}
+
+form:not(.ng-pending) .spinner-border {
+  display: none;
+}

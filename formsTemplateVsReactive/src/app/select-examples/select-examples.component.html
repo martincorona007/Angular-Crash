@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand navbar-dark bg-secondary">
+    <span class="navbar-brand">Select form</span>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active" #templateActive="routerLinkActive">
+          <a class="nav-link" routerLink="template" >Template<span *ngIf="templateActive.isActive" class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" #reactiveActive="routerLinkActive">
+          <a class="nav-link" routerLink="reactive">Reactive<span *ngIf="reactiveActive.isActive" class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>

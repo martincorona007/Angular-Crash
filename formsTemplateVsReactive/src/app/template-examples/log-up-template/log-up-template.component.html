@@ -1,0 +1,118 @@
+<h2 class="display-4">Log up example</h2>
+<h5 class="mb-5">with contextual information</h5>
+
+<form #form="ngForm" (submit)="onSubmit(form)" checkPassword>
+	<div class="form-group row">
+
+		<label class="col-2 col-form-label" for="inputEmail">
+      Email address
+    </label>
+		<div class="col-4 d-flex align-items-center">
+			<input
+        name="email"
+        type="email"
+        class="form-control col-12"
+        id="inputEmail"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+        required
+        email
+        ngModel
+        checkUser
+      />
+			<small id="emailHelp" class="form-text text-muted form-help">
+        We'll never share your email with anyone else.
+      </small>
+			<div class="spinner-border spinner-border-sm ml-n4" role="status">
+				<span class="sr-only">Checking the username...</span>
+			</div>
+		</div>
+		<div class="form-text col-12">
+			<small *ngIf="form.control.get('email')?.hasError('usernameTaken')" id="emailTaken">
+        <span class="text-danger"> Your email seems to be used by someone else. </span>
+        <a routerLink="../login">Try to loggin instead.</a>
+      </small>
+			<small *ngIf="form.control.get('email')?.hasError('email')" id="emailInvalid" class="text-danger">
+        Your email doesn't look like an email.
+      </small>
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-2 col-form-label" for="inputPassword">
+      Password
+    </label>
+		<div class="col-4 d-flex align-items-center">
+			<input
+        name="password"
+        type="password"
+        class="form-control col-12"
+        id="inputPassword"
+        placeholder="Password"
+        aria-describedby="passwordHelp"
+        ngModel
+      />
+			<small id="passwordHelp" class="form-text text-muted form-help">
+        Your password must contain at least 8 caracters.
+      </small>
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-2 col-form-label" for="inputPassword">
+      Confirm Password
+    </label>
+		<div class="col-4 d-flex align-items-center">
+			<input
+        name="confirmPassword"
+        type="password"
+        class="form-control col-12"
+        id="inputConfirmPassword"
+        placeholder="Password"
+        aria-describedby="passwordHelp"
+        ngModel
+      />
+			<small id="passwordHelp" class="form-text text-muted form-help">
+        Please enter your password again.
+      </small>
+		</div>
+
+		<div class="form-text col-12">
+			<small *ngIf="showPasswordNotEqualError(form)" id="passwordNotEqual" class="text-danger">
+        Password should be equal in both fields.
+      </small>
+		</div>
+	</div>
+	<div class="form-group custom-control custom-checkbox">
+		<input
+      name="remember"
+      type="checkbox"
+      class="custom-control-input"
+      id="remember"
+      aria-describedby="rememberHelp"
+      ngModel
+    />
+		<label class="custom-control-label" for="remember">
+      Remember me
+    </label>
+		<small *ngIf="form.control.get('remember')?.value" id="rememberHelp" class="form-text text-muted">
+      We will now remember yous credentials in this PC!
+    </small>
+	</div>
+	<div class="form-group custom-control custom-checkbox">
+		<input
+      name="acceptTerms"
+      type="checkbox"
+      class="custom-control-input"
+      id="acceptTnC"
+      ngModel
+      required
+    />
+		<label class="custom-control-label" for="acceptTnC">
+      I've read and accept the Terms and Conditions
+    </label>
+	</div>
+	<button type="submit" class="btn btn-primary" [disabled]="!form.valid">
+    Log in
+  </button>
+</form>
+
+<app-form-status [forForm]="form"></app-form-status>
