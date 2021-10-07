@@ -20,6 +20,10 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BarraLateralComponent } from './barra-lateral/barra-lateral.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 //========Services
 
 @NgModule({
@@ -30,7 +34,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutComponent,
     ContactComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BarraLateralComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,10 @@ import { FooterComponent } from './components/footer/footer.component';
     MatIconModule,
     MatButtonModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

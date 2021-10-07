@@ -1,0 +1,14 @@
+<p>Component Two</p>
+
+    <nav>
+      <a [routerLink]="['child-one']">Child One</a>
+      &nbsp;
+      <a [routerLink]="['child-two']">Child Two</a>
+    </nav>
+
+    <div style="color: red; margin-top: 1rem;">
+      Component Two's router outlet:
+    </div>
+    <div style="border: 2px solid red; padding: 1rem;">
+      <router-outlet></router-outlet>
+    </div>

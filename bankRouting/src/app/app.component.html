@@ -1,0 +1,25 @@
+<div class="car">
+  <div style="text-align:center;">
+    <h1>
+      Hello Future, welcome to Bank ATM
+    </h1>
+    <h3>What would you like to do?</h3>
+  </div>
+  <nav style="text-align:center;">
+    <button routerLink='/balance' >Check your balance</button>
+    <button routerLink='/deposit' >Deposit some money</button>
+    <button routerLink='/withdraw' >Withdraw some money</button>
+  </nav>
+  <router-outlet></router-outlet>
+  </div>
+---------------------------------
+<nav>
+  <a [routerLink]="['/component-one']">Component One</a>
+  &nbsp;
+  <a [routerLink]="['/component-two']">Component Two</a>
+</nav>
+
+<div style="color: green; margin-top: 1rem;">Outlet:</div>
+<div style="border: 2px solid green; padding: 1rem;">
+  <router-outlet></router-outlet>
+</div>

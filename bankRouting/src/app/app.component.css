@@ -1,0 +1,22 @@
+.car {
+    top: 50%;
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    width: 600px;
+    height: 350px;
+    margin-left: 25%;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    top: 50%;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid #73AD21;
+    width: fit-content;
+    margin: 20px;
+    padding: 20px;
+  }
+  button {top: 50%; text-align: center;border-radius: 15px; border: 2px solid #73AD21; width: fit-content; margin: 20px; padding: 20px;}
