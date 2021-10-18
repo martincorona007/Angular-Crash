@@ -20,6 +20,10 @@ import { SelectReactiveExampleComponent } from "./reactive-examples/select-react
 import { LoginReactiveComponent } from "./reactive-examples/login-reactive/login-reactive.component";
 import { LogUpReactiveComponent } from "./reactive-examples/log-up-reactive/log-up-reactive.component";
 
+/*
+ * TODO: https://stackblitz.com/edit/template-vs-reactive-qb8vx2?file=src%2Fapp%2Freactive-examples%2Flog-up-reactive%2Flog-up-reactive.component.ts  
+ */
+
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
   declarations: [
